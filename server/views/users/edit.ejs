@@ -5,12 +5,12 @@
 
     <form method="post">
         <fieldset class="form-group">
-            <label for="title" class="col-sm-2">Title: *</label>
-            <input name="title" required value="<%= user.title %>" />
+            <label for="username" class="col-sm-2">Username: *</label>
+            <input name="username" required value="<%= user.username %>" />
         </fieldset>
         <fieldset class="form-group">
-            <label for="content" class="col-sm-2">Content: *</label>
-            <textarea name="content" required><%= user.content %></textarea>
+            <label for="password" class="col-sm-2">Password: *</label>
+            <input name="password" required value="<%= user.password %>"/>
         </fieldset>
         <button type="submit" class="col-sm-offset-2 btn btn-success">Submit</button>
 
