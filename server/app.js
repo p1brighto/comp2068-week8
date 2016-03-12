@@ -1,4 +1,5 @@
 /// <reference path = "./_reference.ts"/>
+"use strict";
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -12,13 +13,13 @@ var myerror = new CustomError();
 // add mongoose
 var mongoose = require('mongoose');
 var routes = require('./routes/index');
-//var users = require('./routes/users');
+var users = require('./routes/users');
 var articles = require('./routes/articles');
 var app = express();
 // connect to mongodb with mongoose
 // local mongodb connection
 //mongoose.connect('mongodb://localhost/comp2068-mongodemo');
-mongoose.connect('mongodb://thomas:12345@ds061345.mongolab.com:61345/heroku_qnl2tjrh');
+mongoose.connect('mongodb://p1brighto:chirackal1@ds011389.mlab.com:11389/comp2068-week8');
 // check connection
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'Connection Error: '));
@@ -35,8 +36,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
+//Route definition
 app.use('/', routes);
-//app.use('/users', users);
+app.use('/users', users);
 app.use('/articles', articles);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

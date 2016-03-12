@@ -1,23 +1,25 @@
 import mongoose = require('mongoose');
 
 // DEFINE THE OBJECT SCHEMA
-var articleSchema = new mongoose.Schema ({
+var userSchema = new mongoose.Schema ({
    created: {
        type: Date,
        default:Date.now
    } ,
-   title: {
+   username: {
        type: String,
        default: '',
        trim: true,
-       required: 'Title is required'
+       required: 'Username is required'
    },
-   content: {
+   password: {
        type: String,
        default: '',
-       trim: true
+       trim: true,
+       required: 'Password is required'
    }
-});
+},
+{collection:'userInfo'});
 
 // MAKE THIS PUBLIC SO THE CONTROLLER CAN SEE IT
-export var Article = mongoose.model('Article', articleSchema);
+export var User = mongoose.model('User', userSchema);

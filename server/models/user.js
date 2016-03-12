@@ -1,24 +1,25 @@
 "use strict";
 var mongoose = require('mongoose');
 // DEFINE THE OBJECT SCHEMA
-var articleSchema = new mongoose.Schema({
+var userSchema = new mongoose.Schema({
     created: {
         type: Date,
         default: Date.now
     },
-    title: {
+    username: {
         type: String,
         default: '',
         trim: true,
-        required: 'Title is required'
+        required: 'Username is required'
     },
-    content: {
+    password: {
         type: String,
         default: '',
-        trim: true
+        trim: true,
+        required: 'Password is required'
     }
-}, { collection: 'articleInfo' });
+}, { collection: 'userInfo' });
 // MAKE THIS PUBLIC SO THE CONTROLLER CAN SEE IT
-exports.Article = mongoose.model('Article', articleSchema);
+exports.User = mongoose.model('User', userSchema);
 
-//# sourceMappingURL=article.js.map
+//# sourceMappingURL=user.js.map

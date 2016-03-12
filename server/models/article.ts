@@ -17,7 +17,8 @@ var articleSchema = new mongoose.Schema ({
        default: '',
        trim: true
    }
-});
+},
+{collection:'articleInfo'});
 
 // MAKE THIS PUBLIC SO THE CONTROLLER CAN SEE IT
 export var Article = mongoose.model('Article', articleSchema);
