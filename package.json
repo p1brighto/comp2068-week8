@@ -1,5 +1,5 @@
 {
-  "name": "comp2068-mongodemo",
+  "name": "comp2068-week8",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,9 +7,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/GeorgianCollege/COMP2068-MongoDemo"
+    "url": "https://github.com/p1brighto/comp2068-week8.git"
   },
-  "author": "Tom Tsiliopoulos",
+  "author": "Brighto Paul",
   "description": "A MongoDB Demo Project for COMP2068 @ Georgian College",
   "license": "MIT",
   "dependencies": {
@@ -23,7 +23,7 @@
     "serve-favicon": "~2.3.0"
   },
   "engines": {
-    "node": "5.4.0"
+    "node": "5.4.1"
   },
   "devDependencies": {
     "gulp": "^3.9.1",

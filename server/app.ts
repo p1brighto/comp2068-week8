@@ -27,7 +27,7 @@ var app = express();
 // local mongodb connection
 //mongoose.connect('mongodb://localhost/comp2068-mongodemo');
 
-mongoose.connect('mongodb://thomas:12345@ds061345.mongolab.com:61345/heroku_qnl2tjrh');
+mongoose.connect('mongodb://p1brighto:chirackal1@ds011389.mlab.com:11389/comp2068-week8');
 
 // check connection
 var db: mongoose.Connection = mongoose.connection;
